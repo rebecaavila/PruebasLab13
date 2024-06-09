@@ -4,7 +4,7 @@
 
 -- Crear tabla "clientes" para almacenar información de clientes
 CREATE TABLE clientes (
-  id_cliente SERIAL PRIMARY KEY,
+  id_cliente SERIAL PRIMARY KEY,  -- Definir id_cliente como clave primaria
   nombre VARCHAR(255) NOT NULL,
   apellido VARCHAR(255) NOT NULL,
   direccion VARCHAR(255),
@@ -20,7 +20,7 @@ CREATE TABLE mascotas (
   raza VARCHAR(50),
   sexo VARCHAR(10),
   fecha_nacimiento DATE,
-  id_cliente SERIAL NOT NULL,
+  id_cliente SERIAL NOT NULL,  -- Cambiar INTEGER a SERIAL
   FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
 );
 
