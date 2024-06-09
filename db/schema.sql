@@ -20,7 +20,7 @@ CREATE TABLE mascotas (
   raza VARCHAR(50),
   sexo VARCHAR(10),
   fecha_nacimiento DATE,
-  id_cliente INTEGER NOT NULL,
+  id_cliente SERIAL NOT NULL,
   FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
 );
 
